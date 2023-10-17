@@ -1,1 +1,2 @@
-# wall_clock-
+# wall_clock
+A wall clock with sound effects, crafted using HTML, CSS, and JavaScript, offers a charming and functional addition to digital spaces. This elegant timepiece accurately displays the current time, with hour, minute, and second hands that smoothly move, continuously updating in real-time. As an immersive touch, a soft ticking sound effect accompanies the clock's motion, creating a lifelike and calming atmosphere. The HTML structure and CSS styling provide an aesthetically pleasing design, while JavaScript ensures accurate timekeeping and sound playback. This digital wall clock brings the elegance and auditory charm of a traditional clock to your online environment.
