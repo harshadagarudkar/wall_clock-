@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- <h1>clock</h1> -->
+<div class="container">
+    <div class="hours">
+        <span id="hrs"></span>
+    </div>
+
+
+        <div class="minutes">
+            <span id="min"></span>
+        </div>
+
+            <div class="seconds">
+                <span id="sec"></span>
+               
+            </div>
+            <audio id="clockSound" src="mixkit-tick-tock-clock-close-up-1059.wav" autoplay></audio>
+</div>
+
+
+
+
+
+
+    <script>
+        setInterval(()=>{
+
+let hr=document.getElementById("hrs")
+let mn=document.getElementById("min")
+let sc=document.getElementById("sec")
+let time=new Date()
+let hours_store=time.getHours()
+let minutes_store=time.getMinutes()
+let second_store=time.getSeconds()
+
+
+
+let c_h_r=30*hours_store+minutes_store/2;
+let c_m_r=6*minutes_store
+let c_s_r=6*second_store
+
+
+
+hr.style.transform=`rotate(${c_h_r}deg)`;
+mn.style.transform=`rotate(${c_m_r}deg)`;
+sc.style.transform=`rotate(${c_s_r}deg)`;
+
+// const clockSound = document.getElementById("clockSound");
+const clockSound = document.getElementById("clockSound");
+        if (clockSound) {
+            clockSound.currentTime = 0;
+            clockSound.play();
+            setInterval(()=>{
+                clockSound.play();
+            },6000)
+        }
+
+},1000)
+
+    </script>
+</body>
+</html>
